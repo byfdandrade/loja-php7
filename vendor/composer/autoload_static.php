@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit4913257b895ec07c5d0776b77fd72d8f
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/fdandrade/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'G' => 
+        array (
+            'Galaxy\\' => 7,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Galaxy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/galaxy/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInit4913257b895ec07c5d0776b77fd72d8f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit4913257b895ec07c5d0776b77fd72d8f::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4913257b895ec07c5d0776b77fd72d8f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4913257b895ec07c5d0776b77fd72d8f::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit4913257b895ec07c5d0776b77fd72d8f::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit4913257b895ec07c5d0776b77fd72d8f::$classMap;
 
